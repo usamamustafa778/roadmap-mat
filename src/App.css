@@ -5,7 +5,7 @@
   background-position: center;
 }
 
-.mint > .row > div{
+.mint>.row>div {
   min-height: 100vh;
 }
 
@@ -13,58 +13,45 @@
   cursor: pointer;
 }
 
+
+/* Black Box */
 .mint__left {
   background-color: #000;
-  min-height: 50vh;
+  min-height: 100vh;
   position: relative;
 }
 
-.mint__left > h3{
+
+/* Black Box Text */
+.mint__left>h3 {
   font-size: 35px;
+  line-height: 33px;
 }
-.mint__left > h1{
+
+.mint__left>h1 {
   font-size: 55px;
+  line-height: 50px;
 }
 
-.mint__left__top>h6 {
-  font-size: 12px;
-  font-weight: 800;
-}
 
+/* Gray Box in Black Box */
 .mint__left__top>div>img {
-  height: 200px;
+  height: 150px;
 }
-
-.mint__left > footer > div > h6 {
-  font-size: 14px;
-}
-.mint__left > footer {
-  position: absolute;
-  bottom: 0;
-}
-
-
 
 
 
 
 /* Mint Right */
-.s__icons{
-  position: absolute;
-  top:0;
-}
-.s_icon{
-  height: 40px;
-  margin: 5px;
-}
 .mint__right {
   position: relative;
 }
 
-.mint__right > footer > div > h6 {
-  font-size: 14px;
+.mint__right>footer>div>h6 {
+  font-size: 10px;
 }
-.mint__right > footer {
+
+.mint__right>footer {
   position: absolute;
   bottom: 0;
 }
@@ -73,25 +60,37 @@
   cursor: pointer;
 }
 
+/* Red Box */
+.mint__right>img {
+  height: 250px;
+  cursor: pointer;
+}
+
+/* Corner Texts */
+.text__small>h6 {
+  font-size: 12px;
+}
+
 .mint__right>h6 {
   position: absolute;
   top: 0;
   right: 0;
   margin-right: 20px;
-  font-size: 14px;
+  font-size: 10px;
 }
 
-.mint__right>img {
-  height: 200px;
-  cursor: pointer;
-}
-.text__small > h6{
-  font-size: 12px;
+.mint__left__top>h6 {
+  font-size: 10px;
 }
 
+.mint__left>.footer>div>h6 {
+  font-size: 10px;
+}
 
 
-/* Mint Buttons */
+
+
+/* Input Buttons */
 .noButtons {
   display: none;
 }
@@ -102,7 +101,9 @@
   align-items: center;
 }
 
-.mint__button{
+
+/* Mint Button */
+.mint__button {
   width: 200px;
   height: 50px;
   padding: 5px 0px;
@@ -115,7 +116,41 @@
   cursor: pointer;
   transition: 0.35s;
 }
-.mint__button:hover{
+
+.mint__button:hover {
   background-color: #000;
   color: #fff;
+}
+
+
+/* Social Icons */
+.s__icons {
+  position: absolute;
+  top: 0;
+}
+
+.s_icon>img {
+  cursor: pointer;
+  height: 25px;
+  margin: 5px;
+}
+
+
+@media screen and (max-width:900px) {
+  .mint__left__top>div>img {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .mint__left>h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .mint__left>h1 {
+    font-size: 45px;
+    line-height: 44px;
+  }
+
 }

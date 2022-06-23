@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ethers } from "ethers";
 
 function ConnectWallet() {
@@ -56,11 +56,11 @@ function ConnectWallet() {
     <div className="">
       <p className="" onClick={connectHandler}>
         {walletConnected ? (
-          <div className="wallet-button">
+          <div className="mint__button">
             Wallet Connected
           </div>
         ) : (
-          <div className="wallet-button">
+          <div className="mint__button">
             Connect Wallet
           </div>
         )}

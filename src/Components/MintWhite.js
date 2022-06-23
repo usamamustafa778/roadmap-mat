@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import ConnectWallet from "./ConnectWallet";
 export default function MintWhite() {
   const [mint, setMint] = useState("noButtons");
+  const [audioStatus, changeAudioStatus] = useState(false);
   const showButtons = () => {
     setMint("mintButtons");
+  };
+
+  const myRef = useRef();
+
+  //toogle audio on off
+  const toggleAudio = () => {
+    if (audioStatus) {
+      myRef.current.pause();
+      changeAudioStatus(false);
+    } else {
+      myRef.current.play();
+      changeAudioStatus(true);
+    }
   };
 
   return (
@@ -10,12 +25,26 @@ export default function MintWhite() {
       to="/mint"
       className="col-md-6 d-flex flex-column align-items-center justify-content-center bg-white mint__right"
     >
+      {/* Audio */}
+      <audio ref={myRef} loop src="/images/m.mpeg" />
+
+      {/* Social Icons */}
       <div className="s__icons mt-1 flex align-items-center">
         <a href="#" className="s_icon">
-          <img src="/images/socials/twitter-icon.png" className="s_icon" alt="" />
+          <img src="/images/socials/twitter-icon.png" alt="" />
         </a>
         <a href="#" className="s_icon">
-          <img src="/images/socials/opensea-icon.png" className="s_icon" alt="" />
+          <img src="/images/socials/opensea-icon.png" alt="" />
+        </a>
+        <a
+          className="s_icon"
+          onClick={toggleAudio}
+        >
+          {audioStatus ? (
+            <img src="/images/socials/play.png" />
+          ) : (
+            <img src="/images/socials/pause.png" />
+          )}
         </a>
       </div>
       <h6 className="mt-2 col-4 text-end">UP ONLY</h6>
@@ -31,14 +60,14 @@ export default function MintWhite() {
       </div>
       <div className={mint}>
         <input min={0} placeholder="0" type="number" className="mint__button" />
-        <div className="mint__button">Mint</div>
+        <ConnectWallet />
       </div>
-      <footer className="d-flex px-3 w-100 align-items-center justify-content-between">
+      <footer className="d-flex w-100 align-items-center justify-content-between">
         <div className="col-6">
-          <h6>DEATH VISION LAB</h6>
+          <h6 className="mx-3">DEATH VISION LAB</h6>
         </div>
         <div className="col-6">
-          <h6 className="text-end">DEATH VISION LAB</h6>
+          <h6 className="text-end mx-3">DEATH VISION LAB</h6>
         </div>
       </footer>
     </div>
