@@ -69,6 +69,10 @@
 /* Corner Texts */
 .text__small > h4{
   cursor: pointer;
+  transition: 0.25s;
+}
+.text__small > h4:hover{
+  color: rgb(196, 56, 56);
 }
 .text__small>h6 {
   font-size: 12px;
