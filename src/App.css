@@ -23,14 +23,14 @@
 
 
 /* Black Box Text */
-.mint__left>h3 {
+.big__texts>h3 {
   font-size: 35px;
   line-height: 33px;
 }
 
-.mint__left>h1 {
+.big__texts>h1 {
   font-size: 55px;
-  line-height: 50px;
+  line-height: 51px;
 }
 
 
@@ -67,6 +67,9 @@
 }
 
 /* Corner Texts */
+.text__small > h4{
+  cursor: pointer;
+}
 .text__small>h6 {
   font-size: 12px;
 }
@@ -104,7 +107,7 @@
 
 /* Mint Button */
 .mint__button {
-  width: 200px;
+  width: 250px;
   height: 50px;
   padding: 5px 0px;
   outline: none;
