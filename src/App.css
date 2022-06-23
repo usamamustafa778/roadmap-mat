@@ -1,74 +1,121 @@
-.landing__page{
-  min-height: 100vh;
-  background-image: url(../public/Images/loading_imagebg.png);
-  background-size: cover;
-  background-position: center;
-}
-.mint{
+.landing__page {
   min-height: 100vh;
   background-image: url(../public/Images/loading_imagebg.png);
   background-size: cover;
   background-position: center;
 }
 
-.hero_img{
+.mint > .row > div{
+  min-height: 100vh;
+}
+
+.hero_img {
   cursor: pointer;
 }
 
-.mint__left{
+.mint__left {
   background-color: #000;
   min-height: 50vh;
+  position: relative;
 }
 
-.mint__left__top > h6{
+.mint__left > h3{
+  font-size: 35px;
+}
+.mint__left > h1{
+  font-size: 55px;
+}
+
+.mint__left__top>h6 {
   font-size: 12px;
   font-weight: 800;
 }
-.mint__left__top > div > img{
-  height: 150px;
+
+.mint__left__top>div>img {
+  height: 200px;
 }
 
-.mint__right{
+.mint__left > footer > div > h6 {
+  font-size: 14px;
+}
+.mint__left > footer {
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+
+
+
+/* Mint Right */
+.s__icons{
+  position: absolute;
+  top:0;
+}
+.s_icon{
+  height: 40px;
+  margin: 5px;
+}
+.mint__right {
   position: relative;
 }
-.mint__right > h5{
+
+.mint__right > footer > div > h6 {
+  font-size: 14px;
+}
+.mint__right > footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.mint__right>h5 {
   cursor: pointer;
 }
-.mint__right > h6{
+
+.mint__right>h6 {
   position: absolute;
   top: 0;
   right: 0;
   margin-right: 20px;
   font-size: 14px;
 }
-.mint__right > img{
-  height: 150px; 
+
+.mint__right>img {
+  height: 200px;
   cursor: pointer;
+}
+.text__small > h6{
+  font-size: 12px;
 }
 
 
 
 /* Mint Buttons */
-.noButtons{
+.noButtons {
   display: none;
 }
-.mintButtons{
+
+.mintButtons {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.mintButtons > input{
-  max-width: 60px;
+
+.mint__button{
+  width: 200px;
+  height: 50px;
+  padding: 5px 0px;
   outline: none;
-  border: 1px solid rgb(197, 197, 197);;
-  margin: 20px;
-}
-.mintButtons > div {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
+  border: 3px solid rgb(0, 0, 0);
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+  line-height: 38px;
   cursor: pointer;
-  background-color: rgb(197, 197, 197);
+  transition: 0.35s;
+}
+.mint__button:hover{
+  background-color: #000;
+  color: #fff;
 }
