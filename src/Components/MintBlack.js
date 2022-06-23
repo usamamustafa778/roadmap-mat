@@ -8,9 +8,9 @@ export default function MintBlack() {
         <h6 className="mt-2 col-4">THE HODLER IS STILL HOLDING</h6>
 
         {/* Gray Box */}
-        <div className="col-4 d-flex justify-content-center align-items-center">
+        <a href="https://twitter.com" className="gray__box col-4 d-flex justify-content-center align-items-center">
           <img src="/images/grey.png" alt="" />
-        </div>
+        </a>
 
         {/* Top Right Small TExt */}
         <h6 className="mt-2 col-4 text-end">UP ONLY</h6>
@@ -31,7 +31,7 @@ export default function MintBlack() {
       </div>
 
       {/* Footer Small TExt */}
-      <div className="footer py-1 d-flex align-items-center justify-content-between">
+      <div className="footer d-flex align-items-center justify-content-between">
         <div className="col-8">
           <h6>THE HODLERS © 2022 ALL RIGHTS RESERVED</h6>
         </div>

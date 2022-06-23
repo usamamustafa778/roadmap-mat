@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ConnectWallet from "./ConnectWallet";
 export default function MintWhite() {
   const [mint, setMint] = useState("noButtons");
@@ -32,8 +32,8 @@ export default function MintWhite() {
   // Show Buttons
   const showButtons = () => {
     setMint("mintButtons");
-    startAudio();
   };
+
 
   return (
     <div
@@ -41,7 +41,7 @@ export default function MintWhite() {
       className="col-md-6 d-flex flex-column align-items-center justify-content-center bg-white mint__right"
     >
       {/* Audio */}
-      <audio ref={myRef} loop src="/images/music.mp3" />
+      <audio ref={myRef} loop autoplay src="/images/music.mp3" />
 
       {/* Social Icons */}
       <div className="s__icons mt-1 flex align-items-center">
