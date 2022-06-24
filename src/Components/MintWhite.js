@@ -36,6 +36,10 @@ export default function MintWhite() {
     startAudio();
   };
 
+  useEffect(() => {
+    startAudio();
+  },[])
+
   return (
     <div
       to="/mint"

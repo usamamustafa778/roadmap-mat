@@ -5,6 +5,7 @@ import Mint from "./Pages/Mint";
 import LandingPage from "./Pages/LandingPage";
 
 export default function App() {
+  
   return (
     <>
       <Routes>
