@@ -7,7 +7,6 @@ export default function MintWhite() {
 
   // Play Audio
   const myRef = useRef();
-  const newref = useRef();
 
   const startAudio = () => {
     myRef.current.play();
@@ -33,7 +32,6 @@ export default function MintWhite() {
   // Show Buttons
   const showButtons = () => {
     setMint("mintButtons");
-    startAudio();
   };
 
   useEffect(() => {
@@ -45,6 +43,7 @@ export default function MintWhite() {
       to="/mint"
       className="col-md-6 d-flex flex-column align-items-center justify-content-center bg-white mint__right"
     >
+      
       {/* Audio */}
       <audio ref={myRef} loop src="/images/music.mp3" />
 
@@ -58,16 +57,16 @@ export default function MintWhite() {
         </a>
         <a className="s_icon" onClick={toggleAudio}>
           {audioStatus ? (
-            <img src="/images/socials/pause.png" />
+            <img src="/images/socials/pause.png" alt="pause" />
           ) : (
-            <img src="/images/socials/play.png" />
+            <img src="/images/socials/play.png" alt="play" />
           )}
         </a>
       </div>
       <h6 className="mt-2 col-4 text-end">UP ONLY</h6>
 
       {/* Red Box */}
-      <img onClick={showButtons} src="/images/red.png" alt="" />
+      <img onClick={showButtons} src="/images/red.png" alt="buttons" />
       <div className="text__small mt-3 text-center">
         <h4 className="m-0" onClick={showButtons}>
           Mint Here
