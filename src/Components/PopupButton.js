@@ -4,9 +4,18 @@ import Popup from "./Popup";
 export default function PopupButton() {
   const [isOpen, setIsOpen] = useState(false);
 
+  function timerfuncion() {
+    const timer = setTimeout(() => setIsOpen(false), 2000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
+    timerfuncion();
   };
+
   return (
     <div className="popup__button">
     {/* Button */}
@@ -16,22 +25,15 @@ export default function PopupButton() {
       {isOpen && (
         <Popup
           content={
-            <>
+            <div className="d-flex align-items-center flex-column">
               <img src="/images/red.png" height={100} alt="" />
-              <b>Design your Popup</b>
+              <br />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Enter some quantity to mint.
               </p>
-              <button>Test button</button>
-            </>
+            </div>
           }
-          handleClose={togglePopup}
+          // handleClose={togglePopup}
         />
       )}
     </div>
